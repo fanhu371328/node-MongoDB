@@ -1,0 +1,31 @@
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>nodejs-demo</title>
+</head>
+<body>
+	
+	<div class="box">点我点我</div>
+	
+	
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+	$(".box").on("click",function(){
+		$.ajax({
+			type:'get',
+			url:'http://localhost:3000/get',
+			success:function(data){
+				console.log(data);
+			},
+			error:function(){
+				console.log('error');
+			}
+		})
+	})
+	
+		
+		
+	</script>
+</body>
+</html>
